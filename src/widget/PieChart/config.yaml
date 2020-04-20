@@ -1,0 +1,60 @@
+params:
+  - group: Styles
+    items:
+      - key: width
+        name: Width
+        type: integer
+        ui: input
+        default: 300
+      - key: height
+        name: Height
+        type: integer
+        ui: input
+        default: 300
+  - group: Parameters
+    items:
+      - key: title
+        name: Title
+        type: string
+        ui: input
+        defaultValue: ""
+      - key: type
+        name: Type
+        type: string
+        ui: select
+        options:
+          - pie
+          - doughnut
+        defaultValue: pie
+      - key: items
+        name: Items
+        type: array
+        element:
+          type: object
+          items:
+            - key: label
+              name: Label
+              type: string
+              ui: input
+            - key: color
+              name: Color
+              type: string
+              ui: color-picker
+        ui: list-editor
+        defaultValue:
+          - label: "Red"
+            color: "#ff0000"
+          - label: "Yellow"
+            color: "#ffff00"
+          - label: "Blue"
+            color: "#0000ff"
+      - key: data
+        name: Data
+        type: array
+        element:
+          type: integer
+        ui: list-editor
+        defaultValue:
+          - 10
+          - 20
+          - 30
