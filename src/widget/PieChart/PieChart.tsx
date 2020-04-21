@@ -53,11 +53,7 @@ export default class PieChart extends Widget<Props> {
         const {width, height} = params;
         return (
             <div style={{width: width, height: height, display: 'inline-block'}}>
-                <canvas
-                    id={this.elementId}
-                    width={width.toString()}
-                    height={height.toString()}
-                ></canvas>
+                <canvas id={this.elementId}></canvas>
             </div>
         )
     }

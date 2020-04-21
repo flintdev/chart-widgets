@@ -5,12 +5,12 @@ params:
         name: Width
         type: integer
         ui: input
-        default: 300
+        defaultValue: 300
       - key: height
         name: Height
         type: integer
         ui: input
-        default: 300
+        defaultValue: 300
   - group: Parameters
     items:
       - key: title
