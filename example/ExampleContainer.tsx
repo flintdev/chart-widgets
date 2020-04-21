@@ -3,6 +3,7 @@
 import * as React from 'react';
 import { withStyles, WithStyles, createStyles } from '@material-ui/core/styles';
 import PieChart from "../src/widget/PieChart";
+import BarChart from "../src/widget/BarChart/BarChart";
 
 const styles = createStyles({
     root: {},
@@ -33,6 +34,20 @@ class ExampleContainer extends React.Component<Props, object> {
                     ],
                     data: [10, 20, 30]
                 }}/>
+                <BarChart
+                    params={{
+                        width: 500,
+                        height: 500,
+                        type: 'vertical',
+                        title: "Color Distribution",
+                        items: [
+                            {label: 'Red', color: '#ff0000'},
+                            {label: 'Yellow', color: '#ffff00'},
+                            {label: 'Blue', color: '#0000ff'},
+                        ],
+                        data: [10, 20, 30]
+                    }}
+                />
             </div>
         )
     }
